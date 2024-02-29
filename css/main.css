@@ -55,7 +55,13 @@ table th{background-color: #C0A184;color: white;}
     display: inline;
 }
 
+
 #left-col{
-    float:left
-    
+    float:left;
+    width: 50%;
+    margin-right: 10%;
+    padding: 10px;
+}
+#right-col{
+padding:10px ;
 }
