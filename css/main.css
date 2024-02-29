@@ -41,7 +41,8 @@ nav ul{
     overflow: hidden;
 }
 table{font-family: 'Times New Roman',Helvetica; border-collapse: collapse;}
-table td, table th{border: 2px solid; background-color: #F0F0F0;}
+table td {border: 2px solid; border-color: #F0F0F0;}
+table th{border: 2px solid; border-color: #F0F0F0;}
 table tr:nth-child(even){background-color: #F2F2F2;}
 table tr:hover{background-color: #417c96 ;}
 table th{background-color: #C0A184;color: white;}
