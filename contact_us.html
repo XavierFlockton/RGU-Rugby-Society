@@ -45,9 +45,19 @@
                     <input type="text" name="comments" value=""/><br><br>
                     <label for="file">Attach a file:</label>
                     <input type="file" name="file" value=""/><br><br>
-                    <input type="submit" id="submit" value="Submit">
+                    <button type="button"onclick='send_form("form_outcome","Form has been sent successfully!")'>Submit</button>
+                    <script>
+                        function send_form(id){
+                            document.getElementById(id).innerHTML=content;
+                        }
+                    </script>
                 </fieldset>
               </form>
+              <div>
+                <p id="form_outcome">
+
+                </p>
+              </div>
             </div>
 
             <div id="right-col">

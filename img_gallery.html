@@ -62,7 +62,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <img src="images/Overhand-bow.jpg" alt="picture of a Over hand bow"width="400"height="266"/>
+                        <img id = "img_gallery1" src="images/Overhand-bow.jpg" alt="picture of a Over hand bow"width="400"height="266"/>
                     </div>
                     <div class="col-sm">
                         <img src="images/Double-overhand.jpg" alt="picture of a double over hand bow"width="400"height="266"/>
@@ -77,5 +77,15 @@
         <aside></aside>
 
         <footer><p>Copyright Xavier Flockton</p></footer>
+        <script>
+            document.getElementById("img_gallery").addEventListener("mouseover", highlight);
+            document.getElementById("img_gallery").addEventListener("mouseout", delight);
+            function highlight() {
+                document.getElementById("img-gallery").style="border: solid blue 2px;"
+            }
+            function delight() {
+                document.getElementById("img-gallery").style="border: none;"
+            }
+        </script>
     </body>
 </html>
