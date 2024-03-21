@@ -72,6 +72,17 @@ table th{background-color: #C0A184;color: white;}
 #right-col{
 padding:10px ;
 }
+
+#index_left_col{
+    float:left;
+    width: 50%;
+    margin-right:15%;
+}
+#index_right_col{
+padding: 15px ;
+
+}
+
 .gallery-img{
     width: 100%;
 }

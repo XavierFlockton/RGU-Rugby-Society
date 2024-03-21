@@ -9,14 +9,17 @@
 
     <body>
         <header>
-            <img id="logo" src="images/logo.jpg" alt="a picture of the logo" />
-            <h1 id="title"> 
-                Not Knot Society
-            </h1>
-            <form>
+            <div id="index_left_col">
+                <img id="logo" src="images/logo.jpg" alt="a picture of the logo" />
+                <h1 id="title"> 
+                    Not Knot Society
+                </h1>
+            </div>
+            <div id="index_right_col">
+                <form>
                 <fieldset>
-                <input type="text" name="email" value="email"/>
-                <input type="text" name="password" value="password"/>
+                <input type="email" name="email" value="" placeholder="email"/>
+                <input type="password" name="password" value=""placeholder="password"/>
                 <button type="button" onclick="login()">Login</button>
                 </fieldset>
             </form>
@@ -32,6 +35,8 @@
                     counter += 1;
                 }
             </script>
+            </div>
+            
         </header>
         
         <nav>
