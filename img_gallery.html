@@ -27,65 +27,66 @@
         </nav>
 
         <main>
-            <div id="img-gallery" class="container">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <img src="images/ReefKnot.jpg" alt="picture of a reef knot" width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/ReefKnot.jpg" alt="picture of a reef knot" width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/clovehitch.jpg" alt="picture of a clove hitch knot" width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/clovehitch.jpg" alt="picture of a clove hitch knot" width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/monkeyfist.jpg" alt="picture of a monkey knot"width="400"height="266"/>
-                    </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <img src="images/lightermanshitch.jpg" alt="picture of a lightermans hitch "width="400"height="266"/>
-                    </div>
-                    <div class="col-sm">
-                        <img src="images/mangerhitch.jpg" alt="picture of a manger hitch"width="400"height="266"/>
-                    </div>
-                    <div class="col-sm">
-                        <img src="images/anchorhitch.png" alt="picture of a anchor hitch"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/monkeyfist.jpg" alt="picture of a monkey knot"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <img src="images/chainhitch.jpg" alt="picture of a chain hitch"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/lightermanshitch.jpg" alt="picture of a lightermans hitch "width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/figure-eight-knot.jpg" alt="picture of a figure of eight knot"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/mangerhitch.jpg" alt="picture of a manger hitch"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/ReefKnot.jpg" alt="picture of a reef knot"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/anchorhitch.png" alt="picture of a anchor hitch"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <img id = "img_gallery1" src="images/Overhand-bow.jpg" alt="picture of a Over hand bow"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/chainhitch.jpg" alt="picture of a chain hitch"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/Double-overhand.jpg" alt="picture of a double over hand bow"width="400"height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/figure-eight-knot.jpg" alt="picture of a figure of eight knot"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                     <div class="col-sm">
-                        <img src="images/Sheepshank_knot.jpg" alt="picture of a Sheepshank knot"width="400" height="266"/>
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/ReefKnot.jpg" alt="picture of a reef knot"width="400"height="266" style="opacity: 0.3;"/>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/Overhand-bow.jpg" alt="picture of a Over hand bow"width="400"height="266" style="opacity: 0.3;"/>
+                    </div>
+                    <div class="col-sm">
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/Double-overhand.jpg" alt="picture of a double over hand bow"width="400"height="266" style="opacity: 0.3;"/>
+                    </div>
+                    <div class="col-sm">
+                        <img onmouseover="highlight(this)" onmouseout="delight(this)" src="images/Sheepshank_knot.jpg" alt="picture of a Sheepshank knot"width="400" height="266" style="opacity: 0.3;"/>
+                    </div>
+                </div>
+                <script>
+
+                    function highlight(x) {
+                        x.style="border: solid blue 2px; opacity:1;"
+                    }
+                    function delight(x) {
+                        x.style="border: none;"
+                    }
+                </script>
             </div>
         </main>
             
         <aside></aside>
 
         <footer><p>Copyright Xavier Flockton</p></footer>
-        <script>
-            document.getElementById("img_gallery").addEventListener("mouseover", highlight);
-            document.getElementById("img_gallery").addEventListener("mouseout", delight);
-            function highlight() {
-                document.getElementById("img-gallery").style="border: solid blue 2px;"
-            }
-            function delight() {
-                document.getElementById("img-gallery").style="border: none;"
-            }
-        </script>
+       
     </body>
 </html>

@@ -26,7 +26,11 @@ footer{background-color: #C0A184 ;
     border-radius: 10px;
     margin: 15px
 }
-nav li{border: 2px;border-style: solid;border-color: #7a6652 ;
+
+nav{
+    margin-left: 15px;
+}
+nav li{
     background-color: #C0A184;
     list-style-type: none;
     float: left;
@@ -94,3 +98,5 @@ padding-top: 10px;
 #img-gallery .row{
 margin-bottom: 10px;
 }
+
+
