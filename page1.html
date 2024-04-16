@@ -2,18 +2,24 @@
 <html lang="en" >
     <head>
         <meta charset="UTF-8">
-        
         <title>not Knot Society</title>
+        <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!--css-->
         <link rel='stylesheet' href='css/main.css'>
     </head>
+
+    <!--facebook plugin-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0" nonce="N3KaEZd1"></script>
 
     <!--this is the resource i used to get the quiz code https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide 
     this is the resouce i used for the progress bar https://getbootstrap.com/docs/4.0/components/progress/
     this is the resource i used for the album card https://getbootstrap.com/docs/4.0/examples/album/
     -->
     <body>
+        <!--top div with title and logo-->
         <header>
     
             <img class="logo" src="images/a no knot sign with no text.png" alt="a picture of the logo" >
@@ -22,7 +28,9 @@
                 </h1>
         </header>
         
+        <!--nav bar-->
         <nav>
+            <!--list of links to pages-->
             <ul>
                 <li><a href = index.html >Home</a></li>
                 <li><a href = contact_us.html >Contact Us</a></li>
@@ -32,86 +40,133 @@
                 <li class="active"><a href = page1.html>Knot Knowledge</a></li>
                 <li><a href = page2.html>Knot Encyclopedia</a></li>
             </ul>
-        </nav>    
+        </nav>  
+
          <Main> 
+            <!-- album of cards-->
             <div class="album py-5 bg-light">
                 <div class="container">
-            
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="images/ReefKnot.jpg" alt="reef knot" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                        <div class="card-body">
-                            <div class="container">
-                                <h2>General Knot Knowledge</h2>
-                                <div id="quiz1"></div>
-                                <div id="result1" class="result"></div>
-                                <button id="submit1" class="button">Submit</button>
-                                <button id="retry1" class="button hide">Retry</button>
-                                <button id="showAnswer1" class="button hide">Show Answer</button>
-                                <div class="progress">
-                                    <div id="progress-bar1" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-                                  </div>
+                    <!--the row quizes -->
+                    <div class="row">
+                        <!--quiz 1-->
+                        <div class="col-md-4">
+                            <!--card bootstrap shadow-->
+                            <div class="card mb-4 box-shadow">
+                                <!--card image-->
+                                <img class="card-img-top" src="images/ReefKnot.jpg" alt="reef knot" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body">
+                                    <!--quiz with divs-->
+                                    <div class="container">
+                                        <!--title-->
+                                        <h2>General Knot Knowledge</h2>
+                                        <!--quiz questions-->
+                                        <div id="quiz1"></div>
+                                        <!--quiz answers that were incorrect-->
+                                        <div id="result1" class="result"></div>
+                                        <!--button to submit quiz-->
+                                        <button id="submit1" class="button">Submit</button>
+                                        <!--button to retry quiz-->
+                                        <button id="retry1" class="button hide">Retry</button>
+                                        <!--button to show anwers that were incorrect-->
+                                        <button id="showAnswer1" class="button hide">Show Answer</button>
+                                        <!--button that goes to facebook-->
+                                        <div id="share1" class="button hide" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share to facebook</a></div>
+                                        <!--quiz progress bar-->
+                                        <div class="progress">
+                                            <div id="progress-bar1" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
                             </div>
-                          <div class="d-flex justify-content-between align-items-center">
-                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="images/climber.jpg" alt="image of a climber" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                        <div class="card-body">
-                            <h2>Climbing Knot Quiz</h2>
-                            <div id="quiz2"></div>
-                            <div id="result2" class="result"></div>
-                            <button id="submit2" class="button">Submit</button>
-                            <button id="retry2" class="button hide">Retry</button>
-                            <button id="showAnswer2" class="button hide">Show Answer</button>
-                            <div class="progress">
-                                <div id="progress-bar2" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-                              </div>
-                          <div class="d-flex justify-content-between align-items-center">
-                          </div>
+                        <!--quiz 2-->
+                        <div class="col-md-4">
+                            <!--card shadow-->
+                            <div class="card mb-4 box-shadow">
+                                <!--quiz image-->
+                                <img class="card-img-top" src="images/climber.jpg" alt="image of a climber" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body">
+                                    <!--title-->
+                                    <h2>Climbing Knot Quiz</h2>
+                                    <!--quiz questions-->
+                                    <div id="quiz2"></div>
+                                    <!--questions answered incorrectly-->
+                                    <div id="result2" class="result"></div>
+                                    <!--button to submit quiz-->
+                                    <button id="submit2" class="button">Submit</button>
+                                    <!--button to rety quiz-->
+                                    <button id="retry2" class="button hide">Retry</button>
+                                    <!--button to show incorrect questions-->
+                                    <button id="showAnswer2" class="button hide">Show Answer</button>
+                                    <!--button to take you to facebook-->
+                                    <div id="share2" class="button hide" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share to facebook</a></div>
+                                    <!--progress bar-->
+                                    <div class="progress">
+                                        <div id="progress-bar2" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="images/decorative.jpg" alt="image of a decorative knot" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                        <div class="card-body">
-                            <h2>Decorative Knot Quiz</h2>
-                            <div id="quiz3"></div>
-                            <div id="result3" class="result"></div>
-                            <button id="submit3" class="button">Submit</button>
-                            <button id="retry3" class="button hide">Retry</button>
-                            <button id="showAnswer3" class="button hide">Show Answer</button>
-                            <div class="progress">
-                                <div id="progress-bar3" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-                              </div>
-                          <div class="d-flex justify-content-between align-items-center">
-                          </div>
+                        <!--quiz 3-->
+                        <div class="col-md-4">
+                            <!--card shadow-->
+                            <div class="card mb-4 box-shadow">
+                                <!--quiz image-->
+                                <img class="card-img-top" src="images/decorative.jpg" alt="image of a decorative knot" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body">
+                                    <!--title-->
+                                    <h2>Decorative Knot Quiz</h2>
+                                    <!--quiz questions-->
+                                    <div id="quiz3"></div>
+                                    <!--questions answered incorrectly-->
+                                    <div id="result3" class="result"></div>
+                                    <!--button to submit quiz-->
+                                    <button id="submit3" class="button">Submit</button>
+                                    <!--button to retry quiz-->
+                                    <button id="retry3" class="button hide">Retry</button>
+                                    <!--button to questions answered incorrectly-->
+                                    <button id="showAnswer3" class="button hide">Show Answer</button>
+                                    <!--button to share to facebook-->
+                                    <div id="share3" class="button hide" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share to facebook</a></div>
+                                    <!--progress bar-->
+                                    <div class="progress">
+                                        <div id="progress-bar3" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
             </div>
-                   
+            
+            
+    <!--this is the resource i used to get the quiz code https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide -->
+            <!--script that creates the quiz answers and progress bar-->
             <script>
                 
-                function createQuiz(quiz,quizbox,result,submit,retry,Answer,progress) {
+                // fuction is created and the questions quiz container result container and button ids for each quiz is passed in
+                function createQuiz(quiz,quizbox,result,submit,retry,Answer,share,progress) {
+                    // the ids are then assigned to a variable
                     const quizContainer = document.getElementById(quizbox);
                     const resultContainer = document.getElementById(result);
                     const submitButton = document.getElementById(submit);
                     const retryButton = document.getElementById(retry);
                     const showAnswerButton = document.getElementById(Answer);
+                    const showshare = document.getElementById(share)
                     const progressBar = document.getElementById(progress);    
                     
+                    //indexes are set
                     let currentQuestion = 0;
                     let score = 0;
                     let incorrectAnswers = [];
                     
+                    // function to randomise the order of questions options to make retry harder
                     function shuffleArray(array) {
                         for (let i = array.length - 1; i > 0; i--) {
                         const j = Math.floor(Math.random() * (i + 1));
@@ -119,6 +174,7 @@
                         }
                     }
                     
+                    // function to display questions on card
                     function displayQuestion() {
                         const questionData = quiz[currentQuestion];
                     
@@ -153,6 +209,7 @@
                         quizContainer.appendChild(optionsElement);
                     }
                     
+                    // function to check asnwer submited
                     function checkAnswer() {
                         const selectedOption = document.querySelector('input[name="quiz"]:checked');
                         if (selectedOption) {
@@ -160,6 +217,7 @@
                         if (answer === quiz[currentQuestion].answer) {
                             score++;
                         } else {
+                            // question added to incorrect array
                             incorrectAnswers.push({
                             question: quiz[currentQuestion].question,
                             incorrectAnswer: answer,
@@ -175,24 +233,26 @@
                         }
                         }
 
+                        // progress bar width attribute/ percentage calculated and changed
                         const progressPercentage = ((currentQuestion) / quiz.length) * 100;
                         progressBar.style.width = progressPercentage + "%";
                         progressBar.setAttribute("aria-valuenow", progressPercentage)
                         progressBar.textContent = progressPercentage + "%";
                     }
 
-                        
-
-                    
+                    // function to display results
                     function displayResult() {
                         quizContainer.style.display = "none";
                         submitButton.style.display = "none";
                         retryButton.style.display = "inline-block";
+                        showshare.style.display = "inline-block";
                         showAnswerButton.style.display = "inline-block";
                         resultContainer.innerHTML = `You scored ${score} out of ${quiz.length}!`;
                     }
-                    
+
+                    // function to reset quiz container
                     function retryQuiz() {
+                        //indexes reset
                         currentQuestion = 0;
                         score = 0;
                         incorrectAnswers = [];
@@ -204,12 +264,14 @@
                         displayQuestion();
                     }
                     
+                    // function to show incorrect answers
                     function showAnswer() {
                         quizContainer.style.display = "none";
                         submitButton.style.display = "none";
                         retryButton.style.display = "inline-block";
                         showAnswerButton.style.display = "none";
                     
+                        // displays all questions/ answers to incorrectly answered questions
                         let incorrectAnswersHtml = "";
                         for (let i = 0; i < incorrectAnswers.length; i++) {
                         incorrectAnswersHtml += `
@@ -228,12 +290,16 @@
                         `;
                     }
                     
+                    // add event listiners for each buttom#n
                     submitButton.addEventListener("click", checkAnswer);
                     retryButton.addEventListener("click", retryQuiz);
                     showAnswerButton.addEventListener("click", showAnswer);
 
+                    // calls display function
                     displayQuestion();
                 }
+
+                // stored quiz content
                 const GeneralknotQuiz = [
                     {
                         question: "What knot is often used to secure a rope to a fixed object?",
@@ -393,13 +459,15 @@
                 ]
 
 
-                createQuiz(GeneralknotQuiz,"quiz1", "result1", "submit1","retry1","showAnswer1", "progress-bar1"); 
-                createQuiz(climbingKnotsQuiz,"quiz2", "result2", "submit2","retry2","showAnswer2", "progress-bar2"); 
-                createQuiz(decorativeKnotQuiz,"quiz3", "result3", "submit3","retry3","showAnswer3", "progress-bar3");
+                // creates quiz by passing id names into the create quiz function
+                createQuiz(GeneralknotQuiz,"quiz1", "result1", "submit1","retry1","showAnswer1","share1", "progress-bar1"); 
+                createQuiz(climbingKnotsQuiz,"quiz2", "result2", "submit2","retry2","showAnswer2","share2", "progress-bar2"); 
+                createQuiz(decorativeKnotQuiz,"quiz3", "result3", "submit3","retry3","showAnswer3","share3", "progress-bar3");
 
             </script>
         </Main>  
         
+        <!--bottom div with copyright info-->
         <footer>
             <p>Copyright © Xavier Flockton 2024</p>
         </footer>

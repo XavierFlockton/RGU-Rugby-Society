@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <!-- top div with logo and title -->
         <header>
             <img class="logo" src="images/a no knot sign with no text.png" alt="a picture of the logo" >
                 <h1 class="title"> 
@@ -16,6 +17,7 @@
                 </h1>
         </header>
         
+        <!-- Navivagtion Bar -->
         <nav>
             <ul>
                 <li><a href = index.html >Home</a></li>
@@ -32,14 +34,16 @@
 
         <main>
             <div id="contact-form-page">
+                <!-- left column with form in it -->
                 <div id="left-col">
                     <div>
                         <h3>Contact Us</h3>
                     </div>
                     <div>
+                        <!-- Form -->
                         <form id="contact-us">
                             <fieldset>
-                               <!-- <legend>Contact Us using the below form.</legend>-->
+                                <legend>Contact Us using the below form.</legend>
 
                                 <label for="name">Name:</label>
                                 <input id="name" type="text" name="name" value="">
@@ -61,7 +65,7 @@
                                 <label for="file">Attach a file:</label>
                                 <input id="file" type="file" name="file">
                                 <br><br>
-                                
+                                <!-- Button to submit form -->
                                 <button type="button" onclick='send_form("form_outcome","Form has been sent successfully!")'>Submit</button>
                             </fieldset>
                         </form>
@@ -71,13 +75,15 @@
                     </div>
                 </div>
 
+                <!-- right column div with twitter plugin -->
                 <div id="right-col">
                     <a class="twitter-timeline" data-width="500" data-height="600" data-theme="dark" href="https://twitter.com/RobertGordonUni?ref_src=twsrc%5Etfw">Tweets by RobertGordonUni</a> <script async src="https://platform.twitter.com/widgets.js"></script>        
                 </div>
             </div>
         </main>
         <aside></aside>
-
+        
+        <!-- bottom div with copyright info -->
         <footer><p>Copyright © Xavier Flockton 2024</p></footer>
         <script>
             function send_form(id, content){
